@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f7fb;
+  --bg-elevated: #ffffff;
+  --bg-soft: #eceef5;
+  --text-primary: #10131c;
+  --text-muted: #5b6478;
+  --border: #e1e4ee;
+  --accent-indigo: #6d5dfc;
+  --accent-cyan: #2bc9c1;
+  --accent-indigo-soft: #efeeff;
+  --accent-cyan-soft: #e6f9f7;
+}
+
+.dark {
+  --bg: #090c14;
+  --bg-elevated: #121729;
+  --bg-soft: #161c30;
+  --text-primary: #eef0f8;
+  --text-muted: #929bb5;
+  --border: #232a42;
+  --accent-indigo: #8a7bff;
+  --accent-cyan: #3fe0d0;
+  --accent-indigo-soft: rgba(138, 123, 255, 0.12);
+  --accent-cyan-soft: rgba(63, 224, 208, 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-soft: var(--bg-soft);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-indigo: var(--accent-indigo);
+  --color-cyan: var(--accent-cyan);
+  --color-indigo-soft: var(--accent-indigo-soft);
+  --color-cyan-soft: var(--accent-cyan-soft);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: var(--accent-indigo);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+.text-gradient {
+  background-image: linear-gradient(100deg, var(--accent-indigo), var(--accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
