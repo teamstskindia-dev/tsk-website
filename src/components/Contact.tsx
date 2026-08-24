@@ -93,7 +93,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden py-24 sm:py-32">
+    <section id="contact" className="relative overflow-hidden py-16 sm:py-24">
       {/* ambient background glow, slow drift */}
       <motion.div
         aria-hidden

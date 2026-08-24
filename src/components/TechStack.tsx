@@ -77,7 +77,7 @@ const headingChar: Variants = {
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="relative -mt-10 pb-16 sm:-mt-16 sm:pb-20">
+    <section id="tech-stack" className="relative -mt-10 pb-6 sm:-mt-16 sm:pb-8">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <motion.span
           initial="hidden"
@@ -95,7 +95,7 @@ export default function TechStack() {
       </div>
 
       <div
-        className="relative mt-8 flex h-40 items-center overflow-hidden sm:h-48"
+        className="relative mt-8 flex h-24 items-center overflow-hidden sm:h-28"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",

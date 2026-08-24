@@ -55,7 +55,7 @@ const cardVariants: Variants = {
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 sm:py-32">
+    <section id="services" className="relative py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="max-w-2xl">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
