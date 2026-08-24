@@ -39,7 +39,7 @@
   --color-cyan: var(--accent-cyan);
   --color-indigo-soft: var(--accent-indigo-soft);
   --color-cyan-soft: var(--accent-cyan-soft);
-  --font-display: var(--font-space-grotesk);
+  --font-display: var(--font-archivo);
   --font-body: var(--font-inter);
 }
 

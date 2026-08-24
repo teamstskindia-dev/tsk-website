@@ -1,14 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
 
-const details = [
-  { label: "Registered name", value: "TSKINDIA TECHNOLOGY LLP" },
-  { label: "LLP identification number", value: "ACY-9086" },
-  { label: "Email", value: "tskindiatechnology@gmail.com" },
+const highlights = [
   {
-    label: "Address",
-    value: "Shop No. 108, 109, S.B.J. Complex, Vedvyaspuri, Meerut - 250002",
+    title: "Direct access to the builders",
+    desc: "You talk to the people actually writing your code, not an account manager relaying messages.",
+  },
+  {
+    title: "Small, focused team",
+    desc: "We take on fewer projects at a time so each one gets real attention, not divided attention.",
+  },
+  {
+    title: "Clear communication",
+    desc: "Regular updates and honest scoping, so you always know where the project stands.",
+  },
+  {
+    title: "Support after launch",
+    desc: "We stay reachable for fixes and small improvements after the invoice is paid.",
   },
 ];
 
@@ -26,14 +36,14 @@ export default function About() {
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
               About TSKINDIA
             </span>
-            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
-              A small technology team that builds things it would be proud
-              to use itself.
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+              A Small Technology Team That Builds Things It Would Be Proud
+              To Use Itself.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-text-muted">
-              TSKINDIA Technology LLP is an IT company based in Meerut,
-              Uttar Pradesh, working with businesses across India on
-              websites, software and digital products. We keep teams small
+              TSKINDIA Technology LLP is an IT company working with
+              businesses across India on websites, software and digital
+              products. We keep teams small
               on purpose, so every project gets direct attention from the
               people actually writing the code.
             </p>
@@ -72,18 +82,34 @@ export default function About() {
               }}
             />
             <h3 className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-text-muted">
-              Company details
+              Why teams choose us
             </h3>
-            <dl className="mt-6 space-y-6">
-              {details.map((item) => (
-                <div key={item.label} className="border-b border-border pb-5 last:border-none last:pb-0">
-                  <dt className="text-xs text-text-muted">{item.label}</dt>
-                  <dd className="mt-1.5 font-display text-base font-medium text-text-primary sm:text-lg">
-                    {item.value}
-                  </dd>
-                </div>
+            <ul className="mt-6 space-y-6">
+              {highlights.map((item, i) => (
+                <motion.li
+                  key={item.title}
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex gap-3 border-b border-border pb-5 last:border-none last:pb-0"
+                >
+                  <CheckCircle2
+                    size={18}
+                    className="mt-0.5 flex-shrink-0 text-cyan"
+                    strokeWidth={1.8}
+                  />
+                  <div>
+                    <div className="font-display text-base font-bold tracking-tight text-text-primary">
+                      {item.title}
+                    </div>
+                    <p className="mt-1 text-sm leading-relaxed text-text-muted">
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.li>
               ))}
-            </dl>
+            </ul>
           </motion.div>
         </div>
       </div>

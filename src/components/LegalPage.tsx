@@ -18,7 +18,7 @@ export default function LegalPage({
         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
           Legal
         </span>
-        <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
+        <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
           {title}
         </h1>
         <p className="mt-3 text-sm text-text-muted">Last updated: {updated}</p>

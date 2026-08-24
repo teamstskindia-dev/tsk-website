@@ -8,6 +8,7 @@ import {
   Cloud,
   ShieldCheck,
   LineChart,
+  ArrowUpRight,
 } from "lucide-react";
 
 const services = [
@@ -60,8 +61,8 @@ export default function Services() {
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan">
             What we do
           </span>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
-            Everything a growing business needs to run on great software.
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+            Everything A Growing Business Needs To Run On Great Software.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-muted">
             Every engagement is scoped around one goal: shipping something
@@ -81,20 +82,47 @@ export default function Services() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-60px" }}
                 whileHover={{ y: -6 }}
-                className="group relative rounded-2xl border border-border bg-bg-elevated p-7 transition-colors hover:border-indigo/50"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-bg-elevated p-7 shadow-sm transition-colors duration-300 hover:border-indigo/40 hover:shadow-xl hover:shadow-indigo/5"
               >
+                {/* corner glow, revealed on hover */}
                 <div
-                  className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: "var(--accent-indigo-soft)" }}
-                >
-                  <Icon size={20} className="text-indigo" strokeWidth={1.8} />
+                  aria-hidden
+                  className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-25"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan))",
+                  }}
+                />
+
+                <div className="relative flex items-start justify-between">
+                  <div
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl shadow-sm transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan))",
+                    }}
+                  >
+                    <Icon size={21} className="text-white" strokeWidth={1.8} />
+                  </div>
+                  <span className="font-display text-xs font-semibold tracking-wide text-text-muted/50 tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
                 </div>
-                <h3 className="mt-5 font-display text-lg font-semibold text-text-primary">
+
+                <h3 className="relative mt-6 font-display text-xl font-bold tracking-tight text-text-primary">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                <p className="relative mt-2.5 text-[15px] font-normal leading-[1.7] text-text-muted">
                   {service.desc}
                 </p>
+
+                <div className="relative mt-5 flex items-center gap-1.5 text-xs font-semibold text-indigo opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  Learn more
+                  <ArrowUpRight
+                    size={14}
+                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </div>
               </motion.div>
             );
           })}
