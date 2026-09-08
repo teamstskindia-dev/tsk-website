@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="Privacy Policy" updated="January 1, 2024">
+    <LegalPage title="Privacy Policy">
       <p className="text-sm leading-relaxed text-text-muted sm:text-base">
         TSK India Technology values your trust and is committed to protecting
         your personal information. This policy describes how we collect and
