@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
             Contact Information
           </p>
           <p className="mt-1">TSK India Technology</p>
-          <p>Email: (insert Email ID)</p>
+          <p>Email: tskindiatechnology@gmail.com</p>
           <p>Corporate Office: S.B.J Complex, Ved Vyas Puri, Meerut</p>
         </div>
       </LegalSection>
