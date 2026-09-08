@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LegalPage, { LegalSection } from "@/components/LegalPage";
 
 export const metadata: Metadata = {
@@ -66,14 +67,12 @@ export default function PrivacyPolicyPage() {
           contact us and we will promptly process your request and update
           our records accordingly.
         </p>
-        <div className="rounded-2xl border border-border bg-bg-elevated p-5">
-          <p className="text-sm font-medium text-text-primary">
-            Contact Information
-          </p>
-          <p className="mt-1">TSK India Technology</p>
-          <p>Email: tskindiatechnology@gmail.com</p>
-          <p>Corporate Office: S.B.J Complex, Ved Vyas Puri, Meerut</p>
-        </div>
+        <Link
+          href="/#contact"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo px-6 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:bg-indigo/90"
+        >
+          Go to Contact Us
+        </Link>
       </LegalSection>
     </LegalPage>
   );

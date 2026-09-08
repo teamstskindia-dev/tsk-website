@@ -362,7 +362,7 @@ export default function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="relative mt-6 inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo/10 sm:w-auto cursor-pointer"
+              className="relative mt-6 inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-indigo/5 sm:w-auto cursor-pointer"
               style={{
                 background:
                   "linear-gradient(100deg, var(--accent-indigo), var(--accent-cyan))",

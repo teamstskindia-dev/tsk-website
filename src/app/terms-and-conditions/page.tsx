@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LegalPage, { LegalSection } from "@/components/LegalPage";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms & Conditions" updated="January 1, 2024">
+    <LegalPage title="Terms & Conditions">
       <p className="text-sm leading-relaxed text-text-muted sm:text-base">
         We request you to carefully read the Terms &amp; Conditions
         mentioned on our website before using our services. By accessing or
@@ -89,12 +90,12 @@ export default function TermsPage() {
           For any queries or concerns regarding these Terms and Conditions,
           please contact us at:
         </p>
-        <div className="rounded-2xl border border-border bg-bg-elevated p-5">
-          <p className="text-sm font-medium text-text-primary">
-            TSK India Technology
-          </p>
-          <p className="mt-1">S.B.J Complex, Ved Vyas Puri, Meerut</p>
-        </div>
+        <Link
+          href="/#contact"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo px-6 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:bg-indigo/90"
+        >
+          Go to Contact Us
+        </Link>
       </LegalSection>
     </LegalPage>
   );
