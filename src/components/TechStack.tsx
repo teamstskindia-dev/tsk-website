@@ -84,7 +84,7 @@ export default function TechStack() {
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
           variants={headingContainer}
-          className="inline-block text-2xl font-bold uppercase tracking-[0.18em] text-black sm:text-3xl"
+          className="inline-block text-2xl font-bold uppercase tracking-[0.18em] text-text-primary sm:text-3xl"
         >
           {"Tech we build with".split("").map((char, i) => (
             <motion.span key={i} variants={headingChar} className="inline-block">

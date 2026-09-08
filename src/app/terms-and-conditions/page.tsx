@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import LegalPage, { LegalSection } from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | TSK India Buildcon",
-  description: "Terms and Conditions for TSK India Buildcon.",
+  title: "Terms & Conditions | TSK India Technology",
+  description: "Terms and Conditions for TSK India Technology.",
 };
 
 export default function TermsPage() {
@@ -12,7 +12,7 @@ export default function TermsPage() {
       <p className="text-sm leading-relaxed text-text-muted sm:text-base">
         We request you to carefully read the Terms &amp; Conditions
         mentioned on our website before using our services. By accessing or
-        continuing to use the TSK India Buildcon website, you acknowledge
+        continuing to use the TSK India Technology website, you acknowledge
         and agree to comply with these terms. If you do not agree with any
         part of these Terms &amp; Conditions, you are advised not to use
         this website.
@@ -20,17 +20,17 @@ export default function TermsPage() {
 
       <LegalSection number="1" title="Copyright &amp; Intellectual Property">
         <p>
-          TSK India Buildcon owns all copyright and intellectual property
+          TSK India Technology owns all copyright and intellectual property
           rights on this website. All content, logos, images, and materials
-          are the exclusive property of TSK India Buildcon. By accessing or
-          continuing to use the TSK India Buildcon website, you agree to
+          are the exclusive property of TSK India Technology. By accessing or
+          continuing to use the TSK India Technology website, you agree to
           respect all copyright and intellectual property rights.
         </p>
       </LegalSection>
 
       <LegalSection number="2" title="Use of Information">
         <p>
-          TSK India Buildcon collects user information solely to improve its
+          TSK India Technology collects user information solely to improve its
           services and provide a better experience. We use the information
           to understand user preferences and enhance the quality and
           relevance of our content and offerings.
@@ -39,7 +39,7 @@ export default function TermsPage() {
 
       <LegalSection number="3" title="Limitation of Liability">
         <p>
-          TSK India Buildcon shall not be held liable for any direct,
+          TSK India Technology shall not be held liable for any direct,
           indirect, incidental, or consequential damages arising from the
           use of this website or its content. All information is provided
           on an &lsquo;as-is&rsquo; basis, and we make no warranties
@@ -50,7 +50,7 @@ export default function TermsPage() {
       <LegalSection number="4" title="Information Submitted by Users">
         <p>
           Any information submitted by users through this website may be
-          used by TSK India Buildcon to contact you regarding our services.
+          used by TSK India Technology to contact you regarding our services.
           We use cookies and similar technologies to enhance your experience
           and gather information about how you interact with our site.
         </p>
@@ -59,7 +59,7 @@ export default function TermsPage() {
       <LegalSection number="5" title="Third-Party Links">
         <p>
           This website may contain links to third-party websites. TSK India
-          Buildcon is not responsible for the content, privacy policies, or
+          Technology is not responsible for the content, privacy policies, or
           practices of any third-party websites. We encourage you to review
           the terms and privacy policies of any external sites you visit.
         </p>
@@ -91,7 +91,7 @@ export default function TermsPage() {
         </p>
         <div className="rounded-2xl border border-border bg-bg-elevated p-5">
           <p className="text-sm font-medium text-text-primary">
-            TSK India Buildcon
+            TSK India Technology
           </p>
           <p className="mt-1">S.B.J Complex, Ved Vyas Puri, Meerut</p>
         </div>
