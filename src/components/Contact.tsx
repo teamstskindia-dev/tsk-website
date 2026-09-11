@@ -58,11 +58,13 @@ const steps = [
     icon: Mail,
     title: "We review & reply",
     desc: "Usually within a business day, with questions or next steps.",
+    email: "tskindiatechnology@gmail.com",
   },
   {
     icon: PhoneCall,
     title: "Kick-off call",
     desc: "We align on scope, timeline and budget before anyone writes code.",
+    phone: "+91 70880 88117",
   },
 ];
 
@@ -175,27 +177,34 @@ export default function Contact() {
                       </div>
                       <p className="mt-1 max-w-sm text-sm leading-relaxed text-text-muted">
                         {step.desc}
+                        {step.phone && (
+                          <>
+                            {" "}Want to talk now? Call{" "}
+                            <a
+                              href={`tel:${step.phone.replace(/\s/g, "")}`}
+                              className="whitespace-nowrap font-medium text-indigo transition-colors hover:text-cyan"
+                            >
+                              {step.phone}
+                            </a>
+                          </>
+                        )}
                       </p>
+                      {step.email && (
+                        <p className="mt-1 max-w-sm text-sm leading-relaxed text-text-muted">
+                          Prefer email? Write to{" "}
+                          <a
+                            href={`mailto:${step.email}`}
+                            className="break-all font-medium text-indigo transition-colors hover:text-cyan"
+                          >
+                            {step.email}
+                          </a>
+                        </p>
+                      )}
                     </div>
                   </motion.div>
                 );
               })}
             </div>
-
-            <motion.a
-              href="mailto:tskindiatechnology@gmail.com"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="group mt-10 inline-flex items-center gap-2 text-sm font-medium text-text-muted transition-colors hover:text-indigo"
-            >
-              <Mail size={15} strokeWidth={1.8} />
-              Prefer email? Write to tskindiatechnology@gmail.com
-              <span className="text-indigo opacity-0 transition-opacity group-hover:opacity-100">
-                &rarr;
-              </span>
-            </motion.a>
           </motion.div>
 
           <motion.form

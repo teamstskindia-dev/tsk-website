@@ -163,7 +163,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-1 gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_0.8fr_0.65fr_0.9fr] lg:gap-8"
+          className="grid grid-cols-1 gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.5fr_0.7fr_0.75fr_2.1fr] lg:gap-8"
         >
           <div>
             <Link href="/" className="flex items-center gap-2.5">
@@ -200,10 +200,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+            <div className="flex h-9 items-center text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
               Company
             </div>
-            <ul className="mt-5 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-1">
               {companyLinks.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -222,10 +222,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+            <div className="flex h-9 items-center text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
               Services
             </div>
-            <ul className="mt-5 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-1">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -244,10 +244,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+            <div className="flex h-9 items-center text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
               Legal
             </div>
-            <ul className="mt-5 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-1">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -265,8 +265,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="flex h-9 items-center text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
               Get in touch
             </div>
             <ul className="mt-5 flex flex-col gap-4">
@@ -291,7 +291,10 @@ export default function Footer() {
                 >
                   <MapPin size={14} className="text-indigo" strokeWidth={1.8} />
                 </span>
-                <span className="mt-1.5">Based in India, working worldwide</span>
+                <address className="mt-1.5 not-italic text-balance">
+                  Shop No. 108,109, S.B.J COMPLEX VEDVYAS PUR, Rly. Road Meerut,
+                  Railway Road Police Station, Meerut 250002, Uttar Pradesh, India
+                </address>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-text-muted">
                 <span
