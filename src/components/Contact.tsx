@@ -58,13 +58,13 @@ const steps = [
     icon: Mail,
     title: "We review & reply",
     desc: "Usually within a business day, with questions or next steps.",
-    email: "tskindiatechnology@gmail.com",
+    email: "developer.tskindia@gmail.com",
   },
   {
     icon: PhoneCall,
     title: "Kick-off call",
     desc: "We align on scope, timeline and budget before anyone writes code.",
-    phone: "+91 70880 88117",
+    phone: "+91 63977 74335",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function Contact() {
       `— ${form.name} (${form.email})`,
     ].filter((line) => line !== null);
     const body = encodeURIComponent(bodyLines.join("\n"));
-    window.location.href = `mailto:tskindiatechnology@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:developer.tskindia@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -404,7 +404,7 @@ export default function Contact() {
               </AnimatePresence>
             </motion.button>
             <p className="relative mt-3 text-xs text-text-muted">
-              This opens your email app addressed to tskindiatechnology@gmail.com.
+              This opens your email app addressed to developer.tskindia@gmail.com.
             </p>
           </motion.form>
         </div>

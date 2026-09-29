@@ -272,7 +272,7 @@ export default function Footer() {
             <ul className="mt-5 flex flex-col gap-4">
               <li>
                 <a
-                  href="mailto:tskindiatechnology@gmail.com"
+                  href="mailto:developer.tskindia@gmail.com"
                   className="group flex items-start gap-2.5 text-sm text-text-muted transition-colors hover:text-text-primary"
                 >
                   <span
@@ -281,7 +281,7 @@ export default function Footer() {
                   >
                     <Mail size={14} className="text-cyan" strokeWidth={1.8} />
                   </span>
-                  <span className="mt-1.5 break-all">tskindiatechnology@gmail.com</span>
+                  <span className="mt-1.5 break-all">developer.tskindia@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-sm text-text-muted">
