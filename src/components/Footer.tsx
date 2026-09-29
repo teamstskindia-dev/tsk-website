@@ -176,7 +176,7 @@ export default function Footer() {
                 />
               </span>
               <span className="font-display text-[15px] font-semibold tracking-tight text-text-primary">
-                TSKINDIA <span className="font-normal text-text-muted">Technology</span>
+                TSKINDIA <span className="font-normal text-text-muted">Technology LLP</span>
               </span>
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-text-muted">
